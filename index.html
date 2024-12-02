@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Championship 2024</title>
+  <style>
+    /* General Styles */
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        background-color: #111;
+        overflow-x: hidden;
+    }
+  
+    /* Hero Section */
+    .hero-section {
+        height: 100vh;
+        background: linear-gradient(to bottom, rgba(0, 128, 128, 0.8), rgba(0, 0, 0, 0.9)), 
+                    url('bc.jpg') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+  
+    .hero-overlay {
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+  
+    .hero-title {
+        font-size: 4rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 0;
+        color: #f1c40f;
+    }
+  
+    .hero-subtitle {
+        font-size: 1.5rem;
+        margin: 15px 0 30px;
+        color: #ecf0f1;
+    }
+  
+    .btn-primary {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        background: #27ae60;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, background 0.3s;
+    }
+  
+    .btn-primary:hover {
+        transform: translateY(-5px);
+        background: #2ecc71;
+    }
+  
+    /* Highlights Section */
+    .highlights {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 50px 20px;
+        background: linear-gradient(to bottom, #2c3e50, #34495e);
+    }
+  
+    .highlight {
+        background: rgba(255, 255, 255, 0.1);
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+    }
+  
+    .highlight:hover {
+        transform: scale(1.05);
+    }
+  
+    .highlight h2 {
+        font-size: 1.5rem;
+        color: #f1c40f;
+    }
+  
+    .highlight p {
+        font-size: 1rem;
+        color: #ecf0f1;
+    }
+  
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 3rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+        }
+
+        .btn-primary {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+
+        .highlight {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            font-size: 0.9rem;
+            padding: 8px 15px;
+        }
+
+        .highlight h2 {
+            font-size: 1.2rem;
+        }
+
+        .highlight p {
+            font-size: 0.9rem;
+        }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero-section">
+    <div class="hero-overlay">
+      <h1 class="hero-title">Golf Tournament Jabodetabek 2025</h1>
+      <p class="hero-subtitle">Unleash Your Swing, Claim the Crown</p>
+      <a href="formulir pendaftaran.html" class="btn-primary">Join Now</a>
+    </div>
+  </header>
+  <main>
+    <section class="highlights">
+      <div class="highlight">
+        <h2>🏆Door Prize</h2>
+        <p>1. Rp.100.000.000
+            Sertikat Resmi BCA
+            trophy
+        </p>
+        <p>2. Rp.50.000.000
+            Sertikat Resmi BCA
+            trophy
+        </p>
+        <p>3. Rp.25.000.000
+            Sertikat Resmi BCA
+            trophy
+        </p>
+      </div>
+      <div class="highlight">
+        <h2>📅 Event Date</h2>
+        <p>December 12, 2025, at Kebun Golf Raya Bogor.</p>
+      </div>
+      <div class="highlight">
+        <h2>📍 Location</h2>
+        <p> Kebun Golf Raya Bogor, a Jabodetabek Cup.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

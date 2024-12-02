@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Tournament Registration</title>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #a8e063, #56ab2f); /* Background Gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Registration Section */
+    .registration {
+      background: linear-gradient(135deg, #7ed957, #3cb371); /* Section Gradient */
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .registration h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .registration p {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    /* Form Styling */
+    form {
+      margin-top: 20px;
+    }
+
+    form input, form select {
+      width: calc(100% - 40px); /* Ensure inputs stay inside section */
+      max-width: 420px; /* Prevent from getting too wide */
+      padding: 12px 20px;
+      margin: 10px auto;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: block;
+    }
+
+    form input:focus, form select:focus {
+      outline: none;
+      transform: scale(1.05);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-submit {
+      background: #fff;
+      color: #3cb371;
+      border: none;
+      font-size: 1.2em;
+      padding: 10px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: #3cb371;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .registration {
+        padding: 30px 15px;
+      }
+
+      .registration h2 {
+        font-size: 2em;
+      }
+
+      .btn-submit {
+        font-size: 1em;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="registration">
+    <h2>🎯 Register Now!</h2>
+    <p>Join the most exciting golf tournament of the year! ⛳</p>
+    <form id="registrationForm">
+      <input type="text" id="fullName" placeholder="👤 Full Name" required>
+      <input type="email" id="email" placeholder="📧 Email Address" required>
+      <input type="tel" id="phone" placeholder="📱 Phone Number" required>
+      <select id="category" required>
+        <option value="" disabled selected>🎟 Select Your Category</option>
+        <option value="pro">match play 6 hole </option>
+      </select>
+      <!-- Button to submit form and check validation -->
+      <button type="button" class="btn-submit" onclick="validateForm()">🚀 Register Now</button>
+    </form>
+  </section>
+
+  <script>
+    // Function to validate the form before redirecting to pembayaran.html
+    function validateForm() {
+      // Get the form fields
+      var fullName = document.getElementById("fullName").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var category = document.getElementById("category").value;
+
+      // Check if all fields are filled
+      if (!fullName || !email || !phone || !category) {
+        alert("Please fill out all fields before proceeding.");
+        return false; // Prevent redirection
+      } else {
+        // If form is valid, redirect to pembayaran.html
+        window.location.href = "pembayaran.html";
+      }
+    }
+  </script>
+</body>
+</html>

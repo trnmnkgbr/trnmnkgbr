@@ -1,0 +1,171 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+/* Existing styles without modification */
+.payment {
+text-align: center;
+font-family: 'Arial', sans-serif;
+background: linear-gradient(135deg, #74ebd5, #9face6);
+color: #333;
+padding: 2rem;
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+max-width: 600px;
+margin: 0 auto;
+}
+
+.payment h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+color: #2c3e50;
+}
+
+.payment p {
+font-size: 1rem;
+margin-bottom: 1rem;
+}
+
+.qris-container {
+background: #fff;
+padding: 1rem;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+display: inline-block;
+margin-bottom: 1rem;
+width: 100%;
+height: 250px; /* Set height for the container */
+overflow: hidden; /* Hide any overflowing part of the image */
+position: relative;
+text-align: center; /* Center the content inside */
+}
+
+.qris-image {
+width: 100%;
+height: 100%; /* Ensure the image takes up full container height */
+object-fit: cover; /* Ensure the image covers the container fully without distortion */
+object-position: center; /* Center the image in case of cropping */
+}
+
+form {
+margin-top: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+form input, form button {
+margin-bottom: 1rem;
+width: 90%;
+max-width: 400px;
+padding: 0.8rem;
+border-radius: 8px;
+border: none;
+font-size: 1rem;
+}
+
+form input {
+background: #f9f9f9;
+box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+font-size: 0.9rem;
+color: #555;
+margin-bottom: 0.5rem;
+display: block;
+text-align: left;
+width: 90%;
+max-width: 400px;
+}
+
+.btn-submit {
+background: #2ecc71;
+color: white;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+background: #27ae60;
+}
+
+/* Make the page fully responsive without breaking design */
+@media (max-width: 768px) {
+.payment {
+  padding: 1.5rem;
+}
+
+.payment h2 {
+  font-size: 1.8rem;
+}
+
+form input, form button {
+  font-size: 0.9rem;
+  width: 95%;
+}
+
+.qris-container {
+  height: 200px; /* Adjust height of the container on smaller screens */
+}
+
+.qris-image {
+  object-position: center;
+}
+}
+
+@media (max-width: 480px) {
+.payment {
+  padding: 1rem;
+}
+
+.payment h2 {
+  font-size: 1.5rem;
+}
+
+.qris-container {
+  height: 400px; /* Further reduce container height on mobile */
+  padding: 0.8rem;
+}
+
+.qris-image {
+  object-position: center;
+}
+
+form input, form button {
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+form label {
+  font-size: 0.8rem;
+}
+}
+</style>
+
+<section id="pembayaran" class="payment">
+<h2>💸 Payment Portal</h2>
+<p>Scan the QR code below to complete your payment:</p>
+<div class="qris-container">
+  <img src="qris.png" alt="QRIS Code" class="qris-image">
+  <p><strong>Golf Tournament 2024</strong></p>
+</div>
+<form id="payment-form">
+  <input type="text" placeholder="Your Name" required>
+  <input type="text" placeholder="From Which Bank And In Whose Name" required>
+  <label for="payment-proof">Upload Payment Proof:</label>
+  <input type="file" id="payment-proof" accept="image/*" required>
+  <button type="submit" class="btn-submit">🚀 Confirm Payment</button>
+</form>
+</section>
+
+<script>
+// Handle form submission
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    const waLink = 'https://wa.me/0881011633344';
+    window.location.href = waLink; // Redirect to the specified WhatsApp link
+});
+</script>
